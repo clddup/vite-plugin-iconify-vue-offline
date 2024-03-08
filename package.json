@@ -19,6 +19,13 @@
     "build": "vite build"
   },
   "author": "cl-ddup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clddup/clddup-vite-plugin-iconify-vue-offline"
+  },
+  "bugs": {
+    "url": "https://github.com/clddup/clddup-vite-plugin-iconify-vue-offline/issues"
+  },
   "license": "MIT",
   "peerDependencies": {
     "fast-glob": "*",
