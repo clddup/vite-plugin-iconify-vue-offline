@@ -10,9 +10,12 @@ npm install vite-plugin-iconify-vue-offline
 # 使用
 
 vite.config.ts
+
+在 vite.config.ts 中引入并配置到plugins
 ```ts
 import type { UserConfig, ConfigEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+// 引入vite-plugin-iconify-vue-offline插件
 import Icon from 'vite-plugin-iconify-vue-offline'
 
 export default ({ command, mode }: ConfigEnv): UserConfig => {
@@ -26,7 +29,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     return {
         base: env.VITE_BASE_PATH,
         plugins: [
-            Icon()
+            // 在这里配置vite-plugin-iconify-vue-offline插件
+            Icon(),
             Vue({
                 script: {
                 // 开启defineModel
@@ -43,66 +47,16 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
 ```
 
 main.ts
+
+在 main.ts 中引入 virtual:icon
 ```ts
-import 'vue/jsx'
+...
 
-// 引入windi css
-import '@/plugins/unocss'
-
-// 导入全局的svg图标
-import '@/plugins/svgIcon'
-
-// 初始化多语言
-import { setupI18n } from '@/plugins/vueI18n'
-
-// 引入状态管理
-import { setupStore } from '@/store'
-
-// 全局组件
-import { setupGlobCom } from '@/components'
-
-// 引入element-plus
-import { setupElementPlus } from '@/plugins/elementPlus'
-
-// 引入全局样式
-import '@/styles/index.less'
-
-// 引入动画
-import '@/plugins/animate.css'
-
-// 路由
-import { setupRouter } from './router'
-
-// 权限
-import { setupPermission } from './directives'
-
-import { createApp } from 'vue'
-
-import App from './App.vue'
-
-import './permission'
-
+// 引入 virtual:icon
 import 'virtual:icon'
 
-// 创建实例
-const setupAll = async () => {
-  const app = createApp(App)
-
-  await setupI18n(app)
-
-  setupStore(app)
-
-  setupGlobCom(app)
-
-  setupElementPlus(app)
-
-  setupRouter(app)
-
-  setupPermission(app)
-
-  app.mount('#app')
-}
-
-setupAll()
+...
 
 ```
+
+最后在build阶段就会将用到的 icon 打包进去
