@@ -31,12 +31,8 @@
     "@iconify/json": "*",
     "@iconify/utils": "*",
     "@vue/compiler-sfc": "*",
-    "fast-glob": "*"
-  },
-  "devDependencies": {
-    "vite": "^5.1.5"
-  },
-  "dependencies": {
-    "@iconify/iconify": "^3.1.1"
+    "fast-glob": "*",
+    "@iconify/iconify": "*",
+    "vite": "*"
   }
 }

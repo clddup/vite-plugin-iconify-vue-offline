@@ -12,6 +12,7 @@ export default defineConfig({
         'fast-glob',
         '@vue/compiler-sfc',
         '@iconify/utils',
+        '@iconify/json',
         'node:fs',
         'node:path'
       ]
