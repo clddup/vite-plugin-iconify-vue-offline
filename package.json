@@ -15,7 +15,7 @@
     "require": "./dist/iconify-vue-offline.umd.cjs"
   },
   "scripts": {
-    "dev": "vite --config vite.config.dev.js build",
+    "dev": "vite --config vite.config.dev.js dev",
     "build": "vite build"
   },
   "author": "cl-ddup",
@@ -28,12 +28,15 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "fast-glob": "*",
-    "@vue/compiler-sfc": "*",
+    "@iconify/json": "*",
     "@iconify/utils": "*",
-    "@iconify/json": "*"
+    "@vue/compiler-sfc": "*",
+    "fast-glob": "*"
   },
   "devDependencies": {
     "vite": "^5.1.5"
+  },
+  "dependencies": {
+    "@iconify/iconify": "^3.1.1"
   }
 }
