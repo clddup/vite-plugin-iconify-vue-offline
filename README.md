@@ -2,6 +2,8 @@
 
 vue-element-plus-admin 项目的icon采用线上图标, 打包后部署在纯内网环境无法渲染icon, 使用此插件可以在 build 时候将用到的icon动态打包到项目中
 
+0.0.5 版本适配了 vben v2版本
+
 # 安装
 ```sh
 npm install vite-plugin-iconify-vue-offline
